@@ -15,46 +15,16 @@ use Generated\Shared\Transfer\QuoteRequestTransfer;
 
 interface QuoteRequestAgentStubInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function createQuoteRequest(QuoteRequestTransfer $quoteRequestTransfer): QuoteRequestResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function updateQuoteRequest(QuoteRequestTransfer $quoteRequestTransfer): QuoteRequestResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function reviseQuoteRequest(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function cancelQuoteRequest(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function sendQuoteRequestToCustomer(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestOverviewCollectionTransfer
-     */
     public function getQuoteRequestOverviewCollection(
         QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
     ): QuoteRequestOverviewCollectionTransfer;

@@ -21,19 +21,11 @@ class QuoteRequestReader implements QuoteRequestReaderInterface
      */
     protected $quoteRequestFacade;
 
-    /**
-     * @param \Spryker\Zed\QuoteRequestAgent\Dependency\Facade\QuoteRequestAgentToQuoteRequestFacadeInterface $quoteRequestFacade
-     */
     public function __construct(QuoteRequestAgentToQuoteRequestFacadeInterface $quoteRequestFacade)
     {
         $this->quoteRequestFacade = $quoteRequestFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestOverviewCollectionTransfer
-     */
     public function getQuoteRequestOverviewCollection(
         QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
     ): QuoteRequestOverviewCollectionTransfer {
@@ -42,11 +34,6 @@ class QuoteRequestReader implements QuoteRequestReaderInterface
             ->setCurrentQuoteRequest($this->findQuoteRequest($quoteRequestOverviewFilterTransfer));
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestCollectionTransfer
-     */
     protected function getQuoteRequestCollection(
         QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
     ): QuoteRequestCollectionTransfer {
@@ -58,11 +45,6 @@ class QuoteRequestReader implements QuoteRequestReaderInterface
         return $this->quoteRequestFacade->getQuoteRequestCollectionByFilter($quoteRequestFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestTransfer|null
-     */
     protected function findQuoteRequest(QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer): ?QuoteRequestTransfer
     {
         if (!$quoteRequestOverviewFilterTransfer->getQuoteRequestReference()) {

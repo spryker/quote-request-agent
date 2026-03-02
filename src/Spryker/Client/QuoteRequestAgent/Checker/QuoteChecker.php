@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\QuoteTransfer;
 
 class QuoteChecker implements QuoteCheckerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return bool
-     */
     public function isEditableQuoteRequestVersion(QuoteTransfer $quoteTransfer): bool
     {
         return $quoteTransfer->getQuoteRequestReference() && $quoteTransfer->getQuoteRequestVersionReference();

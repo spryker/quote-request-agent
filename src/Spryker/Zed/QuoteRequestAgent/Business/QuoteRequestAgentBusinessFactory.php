@@ -20,9 +20,6 @@ use Spryker\Zed\QuoteRequestAgent\QuoteRequestAgentDependencyProvider;
  */
 class QuoteRequestAgentBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\QuoteRequestAgent\Business\Reader\QuoteRequestReaderInterface
-     */
     public function createQuoteRequestReader(): QuoteRequestReaderInterface
     {
         return new QuoteRequestReader(
@@ -30,9 +27,6 @@ class QuoteRequestAgentBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\QuoteRequestAgent\Business\Writer\QuoteRequestWriterInterface
-     */
     public function createQuoteRequestWriter(): QuoteRequestWriterInterface
     {
         return new QuoteRequestWriter(
@@ -40,9 +34,6 @@ class QuoteRequestAgentBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\QuoteRequestAgent\Dependency\Facade\QuoteRequestAgentToQuoteRequestFacadeInterface
-     */
     public function getQuoteRequestFacade(): QuoteRequestAgentToQuoteRequestFacadeInterface
     {
         return $this->getProvidedDependency(QuoteRequestAgentDependencyProvider::FACADE_QUOTE_REQUEST);

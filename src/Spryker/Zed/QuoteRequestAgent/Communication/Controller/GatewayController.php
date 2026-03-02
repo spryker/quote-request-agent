@@ -20,61 +20,31 @@ use Spryker\Zed\Kernel\Communication\Controller\AbstractGatewayController;
  */
 class GatewayController extends AbstractGatewayController
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function createQuoteRequestAction(QuoteRequestTransfer $quoteRequestTransfer): QuoteRequestResponseTransfer
     {
         return $this->getFacade()->createQuoteRequest($quoteRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function updateQuoteRequestAction(QuoteRequestTransfer $quoteRequestTransfer): QuoteRequestResponseTransfer
     {
         return $this->getFacade()->updateQuoteRequest($quoteRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function cancelQuoteRequestAction(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer
     {
         return $this->getFacade()->cancelQuoteRequest($quoteRequestFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function sendQuoteRequestToCustomerAction(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer
     {
         return $this->getFacade()->sendQuoteRequestToCustomer($quoteRequestFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function reviseQuoteRequestAction(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer
     {
         return $this->getFacade()->reviseQuoteRequest($quoteRequestFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestOverviewCollectionTransfer
-     */
     public function getQuoteRequestOverviewCollectionAction(
         QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
     ): QuoteRequestOverviewCollectionTransfer {

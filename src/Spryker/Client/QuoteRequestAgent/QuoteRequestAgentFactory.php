@@ -27,9 +27,6 @@ use Spryker\Client\QuoteRequestAgent\Zed\QuoteRequestAgentStubInterface;
  */
 class QuoteRequestAgentFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Converter\QuoteRequestAgentConverterInterface
-     */
     public function createQuoteRequestAgentConverter(): QuoteRequestAgentConverterInterface
     {
         return new QuoteRequestAgentConverter(
@@ -38,17 +35,11 @@ class QuoteRequestAgentFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Status\QuoteRequestAgentStatusInterface
-     */
     public function createQuoteRequestAgentStatus(): QuoteRequestAgentStatusInterface
     {
         return new QuoteRequestAgentStatus($this->getConfig());
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Reader\QuoteRequestReaderInterface
-     */
     public function createQuoteRequestReader(): QuoteRequestReaderInterface
     {
         return new QuoteRequestReader(
@@ -56,41 +47,26 @@ class QuoteRequestAgentFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Checker\QuoteCheckerInterface
-     */
     public function createQuoteChecker(): QuoteCheckerInterface
     {
         return new QuoteChecker();
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Zed\QuoteRequestAgentStubInterface
-     */
     public function createQuoteRequestAgentStub(): QuoteRequestAgentStubInterface
     {
         return new QuoteRequestAgentStub($this->getZedRequestClient());
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Dependency\Client\QuoteRequestAgentToZedRequestClientInterface
-     */
     public function getZedRequestClient(): QuoteRequestAgentToZedRequestClientInterface
     {
         return $this->getProvidedDependency(QuoteRequestAgentDependencyProvider::CLIENT_ZED_REQUEST);
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Dependency\Client\QuoteRequestAgentToQuoteClientInterface
-     */
     public function getQuoteClient(): QuoteRequestAgentToQuoteClientInterface
     {
         return $this->getProvidedDependency(QuoteRequestAgentDependencyProvider::CLIENT_QUOTE);
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Dependency\Client\QuoteRequestAgentToQuoteRequestClientInterface
-     */
     public function getQuoteRequestClient(): QuoteRequestAgentToQuoteRequestClientInterface
     {
         return $this->getProvidedDependency(QuoteRequestAgentDependencyProvider::CLIENT_QUOTE_REQUEST);

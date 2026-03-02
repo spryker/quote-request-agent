@@ -33,11 +33,6 @@ class QuoteRequestAgentDependencyProvider extends AbstractDependencyProvider
      */
     public const CLIENT_QUOTE_REQUEST = 'CLIENT_QUOTE_REQUEST';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -48,11 +43,6 @@ class QuoteRequestAgentDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addZedRequestClient(Container $container): Container
     {
         $container->set(static::CLIENT_ZED_REQUEST, function (Container $container) {
@@ -62,11 +52,6 @@ class QuoteRequestAgentDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addQuoteClient(Container $container): Container
     {
         $container->set(static::CLIENT_QUOTE, function (Container $container) {
@@ -76,11 +61,6 @@ class QuoteRequestAgentDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addQuoteRequestClient(Container $container): Container
     {
         $container->set(static::CLIENT_QUOTE_REQUEST, function (Container $container) {

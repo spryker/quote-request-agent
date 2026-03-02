@@ -11,24 +11,9 @@ use Generated\Shared\Transfer\QuoteRequestTransfer;
 
 interface QuoteRequestAgentStatusInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return bool
-     */
     public function isQuoteRequestCancelable(QuoteRequestTransfer $quoteRequestTransfer): bool;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return bool
-     */
     public function isQuoteRequestRevisable(QuoteRequestTransfer $quoteRequestTransfer): bool;
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return bool
-     */
     public function isQuoteRequestEditable(QuoteRequestTransfer $quoteRequestTransfer): bool;
 }

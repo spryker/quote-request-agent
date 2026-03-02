@@ -43,9 +43,6 @@ class QuoteRequestAgentConverterTest extends Unit
      */
     protected $quoteRequestAgentConverterMock;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
@@ -53,9 +50,6 @@ class QuoteRequestAgentConverterTest extends Unit
         $this->quoteRequestAgentConverterMock = $this->createQuoteRequestAgentConverterMock();
     }
 
-    /**
-     * @return void
-     */
     public function testConvertQuoteRequestToQuoteWithInProgressStatus(): void
     {
         // Arrange
@@ -68,9 +62,6 @@ class QuoteRequestAgentConverterTest extends Unit
         $this->assertTrue($quoteResponseTransfer->getIsSuccessful());
     }
 
-    /**
-     * @return void
-     */
     public function testConvertQuoteRequestToQuoteWithWrongStatus(): void
     {
         // Arrange
@@ -128,12 +119,6 @@ class QuoteRequestAgentConverterTest extends Unit
         return $quoteRequestAgentStatusMock;
     }
 
-    /**
-     * @param string $status
-     * @param string|null $validUntil
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestTransfer
-     */
     protected function createQuoteRequestTransfer(
         string $status = SharedQuoteRequestAgentConfig::STATUS_READY,
         ?string $validUntil = null

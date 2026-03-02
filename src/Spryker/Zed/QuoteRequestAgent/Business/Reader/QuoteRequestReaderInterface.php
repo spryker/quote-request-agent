@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\QuoteRequestOverviewFilterTransfer;
 
 interface QuoteRequestReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestOverviewCollectionTransfer
-     */
     public function getQuoteRequestOverviewCollection(
         QuoteRequestOverviewFilterTransfer $quoteRequestOverviewFilterTransfer
     ): QuoteRequestOverviewCollectionTransfer;

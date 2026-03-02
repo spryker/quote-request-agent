@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\QuoteResponseTransfer;
 
 interface QuoteRequestAgentConverterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function convertQuoteRequestToQuote(QuoteRequestTransfer $quoteRequestTransfer): QuoteResponseTransfer;
 }

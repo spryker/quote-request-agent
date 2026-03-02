@@ -30,10 +30,6 @@ class QuoteRequestAgentConverter implements QuoteRequestAgentConverterInterface
      */
     protected $quoteRequestAgentStatus;
 
-    /**
-     * @param \Spryker\Client\QuoteRequestAgent\Dependency\Client\QuoteRequestAgentToQuoteClientInterface $quoteClient
-     * @param \Spryker\Client\QuoteRequestAgent\Status\QuoteRequestAgentStatusInterface $quoteRequestAgentStatus
-     */
     public function __construct(
         QuoteRequestAgentToQuoteClientInterface $quoteClient,
         QuoteRequestAgentStatusInterface $quoteRequestAgentStatus
@@ -42,11 +38,6 @@ class QuoteRequestAgentConverter implements QuoteRequestAgentConverterInterface
         $this->quoteRequestAgentStatus = $quoteRequestAgentStatus;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function convertQuoteRequestToQuote(QuoteRequestTransfer $quoteRequestTransfer): QuoteResponseTransfer
     {
         if (!$this->quoteRequestAgentStatus->isQuoteRequestEditable($quoteRequestTransfer)) {
@@ -67,11 +58,6 @@ class QuoteRequestAgentConverter implements QuoteRequestAgentConverterInterface
             ->setQuoteTransfer($quoteTransfer);
     }
 
-    /**
-     * @param string $message
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     protected function getErrorResponse(string $message): QuoteResponseTransfer
     {
         return (new QuoteResponseTransfer())

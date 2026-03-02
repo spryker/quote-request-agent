@@ -19,59 +19,31 @@ class QuoteRequestWriter implements QuoteRequestWriterInterface
      */
     protected $quoteRequestFacade;
 
-    /**
-     * @param \Spryker\Zed\QuoteRequestAgent\Dependency\Facade\QuoteRequestAgentToQuoteRequestFacadeInterface $quoteRequestFacade
-     */
     public function __construct(QuoteRequestAgentToQuoteRequestFacadeInterface $quoteRequestFacade)
     {
         $this->quoteRequestFacade = $quoteRequestFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function createQuoteRequest(QuoteRequestTransfer $quoteRequestTransfer): QuoteRequestResponseTransfer
     {
         return $this->quoteRequestFacade->createQuoteRequestForCompanyUser($quoteRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestTransfer $quoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function updateQuoteRequest(QuoteRequestTransfer $quoteRequestTransfer): QuoteRequestResponseTransfer
     {
         return $this->quoteRequestFacade->updateQuoteRequestForCompanyUser($quoteRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function cancelQuoteRequest(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer
     {
         return $this->quoteRequestFacade->cancelQuoteRequestForCompanyUser($quoteRequestFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function reviseQuoteRequest(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer
     {
         return $this->quoteRequestFacade->reviseQuoteRequestForCompanyUser($quoteRequestFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestResponseTransfer
-     */
     public function sendQuoteRequestToCustomer(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestResponseTransfer
     {
         return $this->quoteRequestFacade->sendQuoteRequestToCompanyUser($quoteRequestFilterTransfer);

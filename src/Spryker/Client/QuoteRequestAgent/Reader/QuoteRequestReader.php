@@ -19,9 +19,6 @@ class QuoteRequestReader implements QuoteRequestReaderInterface
      */
     protected $quoteRequestClient;
 
-    /**
-     * @param \Spryker\Client\QuoteRequestAgent\Dependency\Client\QuoteRequestAgentToQuoteRequestClientInterface $quoteRequestClient
-     */
     public function __construct(QuoteRequestAgentToQuoteRequestClientInterface $quoteRequestClient)
     {
         $this->quoteRequestClient = $quoteRequestClient;
@@ -45,11 +42,6 @@ class QuoteRequestReader implements QuoteRequestReaderInterface
             ->getQuoteRequest();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestTransfer|null
-     */
     public function findQuoteRequest(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): ?QuoteRequestTransfer
     {
         $quoteRequestFilterTransfer = (new QuoteRequestFilterTransfer())
@@ -61,11 +53,6 @@ class QuoteRequestReader implements QuoteRequestReaderInterface
             ->getQuoteRequest();
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteRequestFilterTransfer $quoteRequestFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteRequestCollectionTransfer
-     */
     public function getQuoteRequestCollectionByFilter(QuoteRequestFilterTransfer $quoteRequestFilterTransfer): QuoteRequestCollectionTransfer
     {
         return $this->quoteRequestClient->getQuoteRequestCollectionByFilter($quoteRequestFilterTransfer);

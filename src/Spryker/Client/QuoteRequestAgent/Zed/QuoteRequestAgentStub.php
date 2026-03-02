@@ -21,9 +21,6 @@ class QuoteRequestAgentStub implements QuoteRequestAgentStubInterface
      */
     protected $zedRequestClient;
 
-    /**
-     * @param \Spryker\Client\QuoteRequestAgent\Dependency\Client\QuoteRequestAgentToZedRequestClientInterface $zedRequestClient
-     */
     public function __construct(QuoteRequestAgentToZedRequestClientInterface $zedRequestClient)
     {
         $this->zedRequestClient = $zedRequestClient;

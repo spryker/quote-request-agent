@@ -222,9 +222,6 @@ class QuoteRequestAgentClient extends AbstractClient implements QuoteRequestAgen
             ->isEditableQuoteRequestVersion($quoteTransfer);
     }
 
-    /**
-     * @return \Spryker\Client\QuoteRequestAgent\Zed\QuoteRequestAgentStubInterface
-     */
     protected function getZedStub(): QuoteRequestAgentStubInterface
     {
         return $this->getFactory()->createQuoteRequestAgentStub();
