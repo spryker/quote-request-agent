@@ -12,6 +12,8 @@ use Spryker\Shared\Kernel\AbstractSharedConfig;
 class QuoteRequestAgentConfig extends AbstractSharedConfig
 {
     /**
+     * @api
+     *
      * @see \Spryker\Shared\QuoteRequest\QuoteRequestConfig::STATUS_WAITING
      *
      * @var string
@@ -19,6 +21,8 @@ class QuoteRequestAgentConfig extends AbstractSharedConfig
     public const STATUS_WAITING = 'waiting';
 
     /**
+     * @api
+     *
      * @see \Spryker\Shared\QuoteRequest\QuoteRequestConfig::STATUS_READY
      *
      * @var string
@@ -26,6 +30,8 @@ class QuoteRequestAgentConfig extends AbstractSharedConfig
     public const STATUS_READY = 'ready';
 
     /**
+     * @api
+     *
      * @see \Spryker\Shared\QuoteRequest\QuoteRequestConfig::STATUS_DRAFT
      *
      * @var string
@@ -33,6 +39,8 @@ class QuoteRequestAgentConfig extends AbstractSharedConfig
     public const STATUS_DRAFT = 'draft';
 
     /**
+     * @api
+     *
      * @see \Spryker\Shared\QuoteRequest\QuoteRequestConfig::STATUS_CANCELED
      *
      * @var string
@@ -40,6 +48,8 @@ class QuoteRequestAgentConfig extends AbstractSharedConfig
     public const STATUS_CANCELED = 'canceled';
 
     /**
+     * @api
+     *
      * @see \Spryker\Shared\QuoteRequest\QuoteRequestConfig::STATUS_IN_PROGRESS
      *
      * @var string
@@ -47,6 +57,8 @@ class QuoteRequestAgentConfig extends AbstractSharedConfig
     public const STATUS_IN_PROGRESS = 'in-progress';
 
     /**
+     * @api
+     *
      * @see \Spryker\Shared\QuoteRequest\QuoteRequestConfig::STATUS_CLOSED
      *
      * @var string
